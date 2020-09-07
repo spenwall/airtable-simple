@@ -7,7 +7,7 @@ class AirtableSimple {
   }
 
   async first(column, id) {
-    const select = `AND(${column} = ${id})`;
+    const select = `AND(${column} = "${id}")`;
 
     try {
       let row = await this.base(this.table)
