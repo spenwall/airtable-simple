@@ -27,28 +27,38 @@ class AirtableSimple {
     }
   }
 
+  async all() {
+    try {
+      return await this.base('scrapers')
+        .select({
+          // Selecting the first 3 records in Grid view:
+          maxRecords: 100,
+          view: 'Grid view',
+        })
+        .all();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async update(rowId, column, data) {
     try {
-        await this.base(this.table).update(rowId, {
-          [column]: data
-        }) 
+      await this.base(this.table).update(rowId, {
+        [column]: data,
+      });
     } catch (error) {
-     console.log(error)   
+      console.log(error);
     }
   }
 
   async create(row) {
-    this.base(this.table).create(
-      row,
-      function(err, record) {
-        if (err) {
-          console.error(err);
-          return;
-        }
+    this.base(this.table).create(row, function (err, record) {
+      if (err) {
+        console.error(err);
+        return;
       }
-    )
+    });
   }
 }
-
 
 module.exports = AirtableSimple;
