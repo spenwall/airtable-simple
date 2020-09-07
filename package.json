@@ -1,6 +1,6 @@
 {
   "name": "airtable-simple",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This simplifies retrieval of airtable rows",
   "main": "index.js",
   "scripts": {
