@@ -1,0 +1,7 @@
+# Airtable Simple
+
+This is a simplified way to retrieve and update rows in Airtable.
+
+## Methods
+
+- First - Retrieves the first row matching a column and given identifier

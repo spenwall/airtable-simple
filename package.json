@@ -1,7 +1,7 @@
 {
   "name": "airtable-simple",
   "version": "0.0.1",
-  "description": "This simplifies retrival of airtable rows",
+  "description": "This simplifies retrieval of airtable rows",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/spenwall/airtable-simple#readme",
   "dependencies": {
     "airtable": "^0.9.0"
+  },
+  "devDependencies": {
+    "prettier": "2.1.1"
   }
 }
